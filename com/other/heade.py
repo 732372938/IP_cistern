@@ -119,4 +119,7 @@ def get_user_agent():
     user_agent_list = user_agent_list_PC + user_agent_list_MB
     UserAgent = random.choice(user_agent_list)
 
-    return {'User-Agent': UserAgent}
+    return {
+        'User-Agent': UserAgent,
+        "Connection": "close",
+    }

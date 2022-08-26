@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td,
+        th,
+        table {
+            border: 1px solid #284;
+            /*    字体大小*/
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<body>
+<form action="/ti" method="post">
+    <p>删除在下面写: 删ID</p>
+    <p>删12</p>
+    <p>添加在下面写: 加00:00:00&维持秒数</p>
+    <p>加00:12:59&120</p>
+    <p><input class="api" type="text" name="ti" placeholder="请选择添加或删除输入ID" ></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+<table bordercolor="red" align="center">
+    <tr>
+        <th>ID</th>
+        <th>时间</th>
+        <th>持续秒</th>
+    </tr>
+    {% for i in name %}
+        <tr>
+            <td>{{ i[0] }}</td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

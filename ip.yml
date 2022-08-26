@@ -1,0 +1,12 @@
+apps:
+  - script: ./ip.py
+    name: HTTPProxy
+    interpreter: python3
+    env_production:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 5001
+    output: './com/out.log'      #指定日志标准输出文件及位置
+    error: './com/error.log'     #错误输出日志文件及位置，pm2 install pm2-logrotate进行日志文件拆分
+    log_date_format: "DD-MM-YYYY" #日志时间格式
+# pm2 start ip.yml --env productionpid,  # 进程相关文件位置

@@ -13,11 +13,11 @@ def process_kill(process_name):
     :param process_name:ps -ef|grep firefox|awk '{print $2}'|xargs kill -9
     :return:
     """
-    # ps -ef|grep ip_broker.py |grep -v grep|awk '{print $2}'|xargs kill -9
+    # ps -ef|grep ip.py |grep -v grep|awk '{print $2}'|xargs kill -9
     os.system("ps -ef|grep %s |grep -v grep|awk '{print $2}'|xargs kill -9" % process_name)
-    # 重启进程 nohup python3 ip_broker.py & > ip_brok.log 2>&1
+    # 重启进程 nohup python3 ip.py & > ip_brok.log 2>&1
     os.system("nohup python3 %s &" % process_name)
     print("添加进程守护成功")
 
 
-process_kill("ip_broker.py")
+process_kill("ip.py")

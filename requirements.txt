@@ -3,4 +3,11 @@
 # 其他库
 requests >= 2.24.0
 pyyaml >= 5.3.1
-
+schedule >= 1.1.0
+pysocks >= 1
+beautifulsoup4 >= 4
+Unidecode >= 1.1.1
+pyppeteer >= 1
+Flask>=2.1.1
+Flask-APScheduler>=1.9.0
+ping3

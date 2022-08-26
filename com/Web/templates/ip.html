@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .api{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<h1>2.3.2版本</h1>
+<h1>此项目现在由 <a href="https://github.com/CyiceK" >CyiceK</a> 主要维护</h1>
+<form action="/" method="post">
+    <label>
+        <p>{{ msg }}</p>
+        <p>代理开关,目前阻断状态为：{{ ip_pause_flags }}</p>
+        <select name="tf">
+            <optgroup label="启动和停止">
+                <option value="none" selected>不选择</option>
+                <option value="start">恢复分配代理</option>
+                <option value="stop">暂停分配代理</option>
+            </optgroup>
+        </select>
+    </label>
+    <label>
+        <p>等级越高代理越少</p>
+        <select name="grade">
+            <optgroup label="可用等级">
+                <option value="1">一级</option>
+                <option value="2" selected>二级</option>
+                <option value="3">三级</option>
+                <option value="4">四级</option>
+                <option value="5">五级</option>
+                <option value="6">六级</option>
+            </optgroup>
+        </select>
+    </label>
+    <p><a href="http://www.xkdaili.com/?ic=4deqad9q">星空代理注册</a></p>
+    <p>CyiceK 的星空代理邀请码: 4deqad9q 如果注册请填写邀请码</p>
+    <p>如果有星空代理填写或者更换新的星空代理API</p>
+    <p><input class="api" type="text" name="url" placeholder="填写星空代理API,多个API用空格分隔" ></p>
+    <p><input type="submit" value="提交"></p>
+    </form>
+    <form action="/renew" method="get">
+        <p><input type="submit" value="更新"></p>
+    </form>
+</body>
+</html>

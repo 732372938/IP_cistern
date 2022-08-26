@@ -1,0 +1,6 @@
+/ip.log
+!/.github/
+!/venv/
+.idea
+**/__pycache__/**
+com/pysqlit/ip.sqlite
